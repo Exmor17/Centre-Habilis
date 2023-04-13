@@ -1,0 +1,20 @@
+$habilis-red: #cd0756;
+$habilis-grey: #363839;
+$habilis-bright-grey: #eae7e7;
+
+@font-face
+{
+	font-family: 'Raleway';
+    src: url('./raleway/raleway-Regular.ttf') format('truetype');
+}
+@font-face
+{
+    font-family: 'Raleway';
+    src: url('./raleway/raleway-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+*
+{
+	font-family: "Raleway";
+    box-sizing: border-box;
+}

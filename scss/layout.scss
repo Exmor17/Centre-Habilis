@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+}
+header {
+    .contact-bar {
+        color: white;
+        font-size: 1em;
+        text-align: center;
+        background-color: $habilis-red;
+        padding: 10px 0;
+        width: 100%;
+        @media screen and (min-width: 800px) {
+            font-size: 1.5em;
+            padding: 15px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    #logo {
+        margin: 0;
+        padding: 15px 0;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+            height: auto;
+            max-width: 60%;
+        }
+    }
+    .hero-wrapper {
+        height: 280px;
+        width: 100%;
+        .slider {
+            height: 100%;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .description {
+        text-align: center;
+        padding: 15px 45px;
+        @media screen and (min-width: 1200px) {
+            padding: 30px 120px;
+        }
+        &__title {
+            color: $habilis-red;
+            font-size: 2.1em;
+            font-weight: normal;
+            @media screen and (min-width: 1200px) {
+                font-size: 2.3;
+            }
+        }
+        &__content {
+            color: $habilis-grey;
+            font-size: 1em;
+            font-weight: normal;
+            @media screen and (min-width: 1200px) {
+                font-size: 1.1;
+            }
+        }
+        &__address {
+            color: $habilis-grey;
+            font-weight: bold;
+            @media screen and (min-width: 1200px) {
+                font-size: 1.1;
+            }
+        }
+        .fa.fa-map-marker {
+            color: $habilis-grey;
+        }
+    }
+}
+
+.therapists {
+    padding: 0 0 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 30px;
+    @media screen and (min-width: 800px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .therapists__title {
+        color: $habilis-red;
+        font-size: 1.9em;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+footer {
+    color: white;
+    background-color: $habilis-grey;
+    padding: 20px;
+    h5 {
+        font-size: 1.15em;
+    }
+    .location {
+        border: solid $habilis-red 2px;
+        overflow: hidden;
+        height: auto;
+        width: 100%;
+        zoom: 100%;
+    }
+    .copyright {
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "centre-habilis",
+  "version": "1.0.0",
+  "description": "Site vitrine du Centre-Habilis, Lausanne",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exmor17/Centre-Habilis.git"
+  },
+  "author": "A.Fontaine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Exmor17/Centre-Habilis/issues"
+  },
+  "homepage": "https://github.com/Exmor17/Centre-Habilis#readme"
+}

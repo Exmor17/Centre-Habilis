@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("./raleway/raleway-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./raleway/raleway-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header .contact-bar {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  background-color: #cd0756;
+  padding: 10px 0;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  header .contact-bar {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+}
+header .contact-bar a {
+  color: white;
+  text-decoration: none;
+}
+header #logo {
+  margin: 0;
+  padding: 15px 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header #logo img {
+  height: auto;
+  max-width: 60%;
+}
+header .hero-wrapper {
+  height: 280px;
+  width: 100%;
+}
+header .hero-wrapper .slider {
+  height: 100%;
+  width: 100%;
+}
+header .hero-wrapper .slider img {
+  height: 100%;
+  width: 100%;
+}
+header .description {
+  text-align: center;
+  padding: 15px 45px;
+}
+@media screen and (min-width: 1200px) {
+  header .description {
+    padding: 30px 120px;
+  }
+}
+header .description__title {
+  color: #cd0756;
+  font-size: 2.1em;
+  font-weight: normal;
+}
+@media screen and (min-width: 1200px) {
+  header .description__title {
+    font-size: 2.3;
+  }
+}
+header .description__content {
+  color: #363839;
+  font-size: 1em;
+  font-weight: normal;
+}
+@media screen and (min-width: 1200px) {
+  header .description__content {
+    font-size: 1.1;
+  }
+}
+header .description__address {
+  color: #363839;
+  font-weight: bold;
+}
+@media screen and (min-width: 1200px) {
+  header .description__address {
+    font-size: 1.1;
+  }
+}
+header .description .fa.fa-map-marker {
+  color: #363839;
+}
+
+.therapists {
+  padding: 0 0 30px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 30px;
+}
+@media screen and (min-width: 800px) {
+  .therapists {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .therapists {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.therapists .therapists__title {
+  color: #cd0756;
+  font-size: 1.9em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer {
+  color: white;
+  background-color: #363839;
+  padding: 20px;
+}
+footer h5 {
+  font-size: 1.15em;
+}
+footer .location {
+  border: solid #cd0756 2px;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  zoom: 100%;
+}
+footer .copyright {
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.therapist {
+  color: #363839;
+  border: solid #eae7e7 1px;
+  box-shadow: 0px 0px 15px -11px #363839;
+  padding: 25px;
+  height: fit-content;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 15px;
+}
+@media screen and (min-width: 800px) {
+  .therapist {
+    width: 45%;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .therapist {
+    width: 30%;
+  }
+}
+.therapist__picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.therapist__picture hr {
+  background-color: #cd0756;
+  border: none;
+  height: 3px;
+  width: 60px;
+  margin: 0;
+}
+.therapist__picture__container {
+  border: solid #cd0756 3px;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 80px;
+  width: 80px;
+}
+.therapist__picture__container img {
+  height: 100%;
+  width: 100%;
+}
+.therapist__infos {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.therapist__infos p {
+  margin: 5px 0;
+}
+.therapist__infos a {
+  color: #cd0756;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 0;
+}
+.therapist__infos__name {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 5px 0 8px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
