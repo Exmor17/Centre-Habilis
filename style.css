@@ -90,14 +90,26 @@ header .description__content {
 header .description__address {
   color: #363839;
   font-weight: bold;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 1200px) {
   header .description__address {
     font-size: 1.1;
   }
 }
-header .description .fa.fa-map-marker {
+header .description__address .fa.fa-map-marker {
   color: #363839;
+  font-size: 2.2em;
+}
+header .description__address .marker-base {
+  border: solid #363839 3px;
+  background-color: #eae7e7;
+  border-radius: 100px/50px;
+  width: 50px;
+  height: 20px;
 }
 
 .therapists {
@@ -133,19 +145,57 @@ header .description .fa.fa-map-marker {
 footer {
   color: white;
   background-color: #363839;
-  padding: 20px;
+  padding: 25px;
+  height: fit-content;
 }
-footer h5 {
-  font-size: 1.15em;
+@media screen and (min-width: 800px) {
+  footer .footer__container {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+  }
 }
-footer .location {
+footer .footer__container h5 {
+  font-size: 1.3em;
+}
+footer .footer__container p {
+  font-size: 1.1em;
+  margin: 12px 0;
+}
+footer .footer__container .fa-solid.fa-envelope {
+  font-size: 1.3em;
+  padding-right: 10px;
+}
+footer .footer__container .fa-brands.fa-square-facebook {
+  font-size: 2em;
+  padding-top: 20px;
+}
+footer .footer__container a {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+footer .footer__container strong {
+  font-size: 1.2em;
+}
+footer .footer__container .location {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__container .location .map {
   border: solid #cd0756 2px;
   overflow: hidden;
-  height: auto;
+  height: 240px;
   width: 100%;
   zoom: 100%;
 }
+@media screen and (min-width: 800px) {
+  footer .footer__container .location .map {
+    height: 150px;
+  }
+}
 footer .copyright {
+  padding: 20px 0 10px 0;
   text-align: center;
 }
 footer a {
@@ -158,12 +208,44 @@ footer a {
   border: solid #eae7e7 1px;
   box-shadow: 0px 0px 15px -11px #363839;
   padding: 25px;
+  overflow: hidden;
+  position: relative;
   height: fit-content;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 15px;
+}
+.therapist__more-button-off {
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 20px;
+  width: 20px;
+  z-index: 1;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+.therapist__more-button-off .fa-solid.fa-plus {
+  color: #eae7e7;
+  font-size: 1.6em;
+}
+.therapist__more-button-on {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+.therapist::after {
+  content: "";
+  background-color: #cd0756;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: rotate(45deg) translate(70%);
+  height: 90px;
+  width: 90px;
 }
 @media screen and (min-width: 800px) {
   .therapist {
@@ -219,6 +301,26 @@ footer a {
   font-weight: bold;
   font-size: 1.3em;
   margin: 5px 0 8px 0;
+}
+.therapist .bg-off {
+  background-color: #cd0756;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 300%;
+  width: 300%;
+  transform: translate(110%, 50%) rotate(-45deg);
+  transition: transform 1.5s ease-in-out;
+}
+.therapist .bg-on {
+  background-color: #cd0756;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 300%;
+  width: 300%;
+  transform: translate(0%, 0%) rotate(0deg);
+  transition: transform 1.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

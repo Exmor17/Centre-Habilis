@@ -3,12 +3,44 @@
     border: solid $habilis-bright-grey 1px;
     box-shadow: 0px 0px 15px -11px $habilis-grey;
     padding: 25px;
+    overflow: hidden;
+    position: relative;
     height: fit-content;
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     row-gap: 15px;
+    &__more-button-off {
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        height: 20px;
+        width: 20px;
+        z-index: +1;
+        transform: rotate(0deg);
+        transition: transform 0.5s;
+        .fa-solid.fa-plus {
+            color: $habilis-bright-grey;
+            font-size: 1.6em;
+        }
+    }
+    &__more-button-on {
+        transform: rotate(45deg);
+        transition: transform 0.5s;
+    }
+    &::after {
+        content:"";
+        background-color: $habilis-red;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: rotate(45deg) translate(70%);
+        height: 90px;
+        width: 90px;
+    }
     @media screen and (min-width: 800px) {
         width: 45%;
         justify-content: flex-start;
@@ -60,5 +92,25 @@
             font-size: 1.3em;
             margin: 5px 0 8px 0;
         }
+    }
+    .bg-off {
+        background-color: $habilis-red;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 300%;
+        width: 300%;
+        transform: translate(110%,50%) rotate(-45deg);
+        transition: transform 1.5s ease-in-out;
+    }
+    .bg-on {
+        background-color: $habilis-red;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 300%;
+        width: 300%;
+        transform: translate(0%,0%) rotate(0deg);
+        transition: transform 1.5s ease-in-out;
     }
 }

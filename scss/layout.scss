@@ -67,12 +67,24 @@ header {
         &__address {
             color: $habilis-grey;
             font-weight: bold;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             @media screen and (min-width: 1200px) {
                 font-size: 1.1;
             }
-        }
-        .fa.fa-map-marker {
-            color: $habilis-grey;
+            .fa.fa-map-marker {
+                color: $habilis-grey;
+                font-size: 2.2em;
+            }
+            .marker-base {
+                border: solid $habilis-grey 3px;
+                background-color: $habilis-bright-grey;
+                border-radius: 100px / 50px;
+                width: 50px;
+                height: 20px;
+            }
         }
     }
 }
@@ -106,18 +118,54 @@ header {
 footer {
     color: white;
     background-color: $habilis-grey;
-    padding: 20px;
-    h5 {
-        font-size: 1.15em;
-    }
-    .location {
-        border: solid $habilis-red 2px;
-        overflow: hidden;
-        height: auto;
-        width: 100%;
-        zoom: 100%;
+    padding: 25px;
+    height: fit-content;
+    .footer__container {
+        @media screen and (min-width: 800px) {
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 25px;
+        }
+        h5 {
+            font-size: 1.3em;
+        }
+        p {
+            font-size: 1.1em;
+            margin: 12px 0;
+        }
+        .fa-solid.fa-envelope {
+            font-size: 1.3em;
+            padding-right: 10px;
+        }
+        .fa-brands.fa-square-facebook {
+            font-size: 2em;
+            padding-top: 20px;
+        }
+        a {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        strong {
+            font-size: 1.2em;
+        }
+        .location {
+            display: flex;
+            flex-direction: column;
+            .map {
+                border: solid $habilis-red 2px;
+                overflow: hidden;
+                height: 240px;
+                width: 100%;
+                zoom: 100%;
+                @media screen and (min-width: 800px) {
+                    height: 150px;
+                }
+            }
+        }
     }
     .copyright {
+        padding: 20px 0 10px 0;
         text-align: center;
     }
     a {
