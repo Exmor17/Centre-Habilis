@@ -8,10 +8,10 @@ header {
         text-align: center;
         background-color: $habilis-red;
         padding: 10px 0;
+        height: 20px;
         width: 100%;
         @media screen and (min-width: 800px) {
-            font-size: 1.5em;
-            padding: 15px;
+            height: 40px;
         }
         a {
             color: white;
@@ -19,8 +19,9 @@ header {
         }
     }
     #logo {
+        box-shadow: none;
         margin: 0;
-        padding: 15px 0;
+        padding: 7px 0;
         height: auto;
         width: 100%;
         display: flex;
@@ -28,9 +29,16 @@ header {
         img {
             height: auto;
             max-width: 60%;
+            @media screen and (min-width: 800px) {
+                max-width: 40%;
+            }
+            @media screen and (min-width: 1200px) {
+                max-width: 30%;
+            }
         }
     }
     .hero-wrapper {
+        z-index: -1;
         height: 280px;
         width: 100%;
         .slider {
@@ -50,7 +58,7 @@ header {
         }
         &__title {
             color: $habilis-red;
-            font-size: 2.1em;
+            font-size: 1.9em;
             font-weight: normal;
             @media screen and (min-width: 1200px) {
                 font-size: 2.3;

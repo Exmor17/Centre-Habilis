@@ -1,12 +1,15 @@
 function infoTherapist () {
-    let moreButtons = Array.from(document.getElementsByClassName("therapist__more-button-off"));
-    console.log(moreButtons);
-    let bgEl = document.querySelector(".bg-off");
-    console.log(bgEl);
+    let moreButtons = Array.from(document.getElementsByClassName("morebutton"));
     moreButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            button.classList.toggle('therapist__more-button-on');
-            bgEl.classList.toggle('bg-on');
+            button.classList.toggle('morebutton--off');
+            button.classList.toggle('morebutton--on');
+            let bgEl = button.nextElementSibling;
+            let moreEl = button.previousElementSibling;
+            bgEl.classList.toggle('bg--off');
+            bgEl.classList.toggle('bg--on');
+            moreEl.classList.toggle('more--off');
+            moreEl.classList.toggle('more--on');
         })
     });
 }
