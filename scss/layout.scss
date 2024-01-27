@@ -1,4 +1,5 @@
 body {
+    position: relative;
     margin: 0;
 }
 header {
@@ -18,39 +19,177 @@ header {
             text-decoration: none;
         }
     }
-    #logo {
-        box-shadow: none;
-        margin: 0;
-        padding: 7px 0;
-        height: auto;
+    .hero-container {
+        position: relative;
+        background-image: url(./img/stones-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 500px;
         width: 100%;
         display: flex;
-        justify-content: center;
-        img {
-            height: auto;
-            max-width: 60%;
-            @media screen and (min-width: 800px) {
-                max-width: 40%;
-            }
-            @media screen and (min-width: 1200px) {
-                max-width: 30%;
-            }
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 20px;
+        @media screen and (min-width: 665px) {
+            height: 700px;
+            row-gap: 40px;
         }
-    }
-    .hero-wrapper {
-        z-index: -1;
-        height: 280px;
-        width: 100%;
-        .slider {
+        &::before {
+            content: "";
+            background-color: black;
+            opacity: 0.2;
+            filter: brightness(60%);
+            position: absolute;
             height: 100%;
             width: 100%;
-            img {
+        }
+        .logo-container {
+            padding: 15px 0 0 0;
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #logo {
+                box-shadow: none;
+                margin: 0;
+                height: auto;
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                @media screen and (min-width: 665px) {
+                    width: 30%;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .pitch {
+            background-color: $habilis-dark-transparent-red;
+            animation: pitch-entrance 1000ms 1000ms both;
+            padding: 11px 7px;
+            width: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (min-width: 665px) {
+                padding: 14px 10px;
+                width: 60%;
+            }
+            .pitch-text {
+                color: white;
+                opacity: 1;
+                font-size: 1em;
+                font-weight: 100;
+                text-align: center;
+                z-index: +5;
+                @media screen and (min-width: 665px) {
+                    font-size: 1.3em;
+                }
+            }
+        }
+        .services-container {
+            padding: 0 15px 20px 15px;
+            height: 65%;
+            width: 100%;
+            .services {
+                position: relative;
                 height: 100%;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .services-block {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &:nth-child(1) {
+                        width: 80%;
+                        animation: services-entrance 1000ms 2000ms both;
+                    }
+                    &:nth-child(2) {
+                        animation: services-entrance 1000ms 2250ms both;
+                    }
+                    &:nth-child(3) {
+                        width: 80%;
+                        animation: services-entrance 1000ms 2500ms both;
+                        @media screen and (min-width: 665px) {
+                            width: 60%;
+                        }
+                    }
+                    &:nth-child(4) {
+                        animation: services-entrance 1000ms 2750ms both;
+                    }
+                    &:nth-child(5) {
+                        width: 80%;
+                        animation: services-entrance 1000ms 3000ms both;
+                    }
+                    &:nth-child(6) {
+                        animation: services-entrance 1000ms 3250ms both;
+                    }
+                    .service {
+                        color: $habilis-bright-grey;
+                        background-color: $habilis-grey;
+                        border-radius: 24px;
+                        font-size: 0.7em;
+                        font-weight: 500;
+                        text-align: center;
+                        text-transform: uppercase;
+                        padding: 12px 11px;
+                        @media screen and (min-width: 665px) {
+                            font-size: 1em;
+                            padding: 17px 16px;
+                            border-radius: 28px;
+                        }
+                    }
+                }
+                /*
+                .service:nth-child(1) {
+                    top: 5%;
+                    left: 25%;
+                }
+                .service:nth-child(2) {
+                    top: 25%;
+                    left: 85%;
+                }
+                .service:nth-child(3) {
+                    top: 85%;
+                    left: 50%;
+                    min-width: 230px;
+                }
+                .service:nth-child(4) {
+                    top: 5%;
+                    left: 75%;
+                }
+                .service:nth-child(5) {
+                    top: 65%;
+                    left: 18%;
+                }
+                .service:nth-child(6) {
+                    top: 25%;
+                    left: 15%;
+                }
+                .service:nth-child(7) {
+                    top: 65%;
+                    left: 85%;
+                }
+                */
             }
         }
     }
+    .privacy-policy {
+        color: white;
+        background-color: $habilis-grey;
+        background-image: none;
+        height: 300px;
+        justify-content: flex-start;
+    }     
     .description {
+        background-color: $habilis-bright-grey;
         text-align: center;
         padding: 15px 45px;
         @media screen and (min-width: 1200px) {
@@ -66,7 +205,7 @@ header {
         }
         &__content {
             color: $habilis-grey;
-            font-size: 1em;
+            font-size: 1.3em;
             font-weight: normal;
             @media screen and (min-width: 1200px) {
                 font-size: 1.1;
@@ -79,27 +218,31 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
+            row-gap: 3px;
             @media screen and (min-width: 1200px) {
                 font-size: 1.1;
             }
             .fa.fa-map-marker {
                 color: $habilis-grey;
                 font-size: 2.2em;
+                animation: location-pointer 1500ms 1000ms infinite;
             }
             .marker-base {
                 border: solid $habilis-grey 3px;
-                background-color: $habilis-bright-grey;
+                background-color: white;
                 border-radius: 100px / 50px;
-                width: 50px;
-                height: 20px;
+                width: 35px;
+                height: 17px;
             }
         }
     }
 }
-
-.therapists {
+.main-content {
+    background-color: $habilis-bright-grey;
     padding: 0 0 30px 0;
     width: 100%;
+}
+.therapists {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -123,12 +266,12 @@ header {
     }
 }
 
-footer {
+.footer {
     color: white;
     background-color: $habilis-grey;
     padding: 25px;
     height: fit-content;
-    .footer__container {
+    &__container {
         @media screen and (min-width: 800px) {
             padding: 0 15px;
             display: flex;
@@ -172,9 +315,10 @@ footer {
             }
         }
     }
-    .copyright {
-        padding: 20px 0 10px 0;
+    &__bottom {
+        padding: 10px 0 10px 0;
         text-align: center;
+        display: block;
     }
     a {
         text-decoration: none;

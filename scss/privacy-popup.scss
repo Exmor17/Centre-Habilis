@@ -1,0 +1,61 @@
+.popup {
+    color: white;
+    background-color: $habilis-grey;
+    box-shadow: 0px 0px 15px -11px $habilis-grey;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    animation: privacy-popup-entrance 1000ms 1800ms both;
+    height: auto;
+    width: 100%;
+    z-index: +10;
+    @media screen and (min-width: 800px) {
+        border-radius: 10px;
+        bottom: 2%;
+        width: 70%;
+    }
+    &__content {
+        padding: 0 15px;
+        &__title {
+            text-transform: uppercase;
+            i {
+                font-size: 1.2em;
+                margin-left: 10px;
+            }
+        }
+        &__morelink {
+            color: white;
+            font-size: 0.9em;
+            text-decoration: none;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 10px;
+            &:hover {
+                transform: translateX(2%);
+            }
+            i {
+                font-size: 1.4em;
+            }
+        }
+    }
+    &__closesection {
+        border-top: solid $habilis-red 2px;
+        padding: 15px;
+        height: auto;
+        &__closebutton {
+            color: white;
+            font-size: 1.2em;
+            background-color: $habilis-red;
+            border-radius: 4px;
+            border: none;
+            padding: 7px 9px;
+            height: auto;
+            &:focus {
+                background-color: $habilis-dark-red;
+            }
+        }
+    }
+}
